@@ -6,7 +6,7 @@ int main(){
     char mapa[n][n];
 
     for (int i=0; i<n; i++)
-        for(int j=0; j<n; i++)
+        for(int j=0; j<n; j++)
             mapa[i][j]='.';
   mapa[1][2]='M';
   mapa[3][4]='M';
@@ -15,6 +15,17 @@ int main(){
   mapa[6][7]='M';
   mapa[9][8]='M';
 
-  int punkty;
+  int punkty=0;
   int x=0, y=0;
+  while (punkty<6){
+    for (int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            if (i==x&&j==y){
+                    cout << "P ";
+
 }
+            else{
+                cout << mapa[i][j] << " ";
+}}
+        cout << endl;
+}}}
