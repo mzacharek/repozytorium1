@@ -17,15 +17,30 @@ int main(){
 
   int punkty=0;
   int x=0, y=0;
+  char ruch;
   while (punkty<6){
     for (int i=0; i<n; i++){
         for(int j=0; j<n; j++){
             if (i==x&&j==y){
-                    cout << "P ";
+                    cout << "G ";
 
 }
             else{
                 cout << mapa[i][j] << " ";
 }}
         cout << endl;
-}}}
+}
+    cout << "Punkty: " << punkty << endl;
+    cout << "Pozycja gracza: (" << x <<", " << y << ")" << endl;
+    cout << "Aby sie poruszyc nacisnij klaiwsz:" << endl;
+    cout << "Nacisnij W, aby poruszyc sie do gory." << endl;
+    cout << "Nacisnij A, aby poruszyc sie w lewo."<<endl;
+    cout <<"Nacisnij S, aby poruszyc sie w dol." << endl;
+    cout << "Nacisnij D, aby poruszyc sie w prawo." << endl;
+    cout << "Wybor nalezy do ciebe." << endl;
+    cin >> ruch;
+
+
+
+
+}}
