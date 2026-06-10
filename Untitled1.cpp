@@ -40,7 +40,28 @@ int main(){
     cout << "Wybor nalezy do ciebe." << endl;
     cin >> ruch;
 
+    if((ruch== 'w' || ruch=='W')&& x>0){
+        x--;
+    }
+    if ((ruch=='s'||ruch=='S')&&x<n-1){
+        x++;
+    }
+    if ((ruch=='a'||ruch=='A')&& y>0){
+        y--;
+    }
+    if((ruch=='d'||ruch=='D')&& y<n-1){
+        y++;
+    }
+
+    if (mapa[x][y]=='M'){
+        punkty++;
+        mapa[x][y]='.';
+        cout << "Brawo! Zdobyles punkt."<<endl;
+    }
 
 
-
-}}
+}
+    cout << "Zebrales wszystkie moenty!" << endl;
+    cout << "GRATULACJE" << endl;
+    cout << "Koniec gry. Dziekuje za udzial." << endl;
+}
