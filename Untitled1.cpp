@@ -2,6 +2,14 @@
 using namespace std;
 
 int main(){
+
+    cout << "----------------------------------------------" << endl;
+    cout << " NAZWA GRY: Zostan lowca skarbow. Zbieranie monet." << endl;
+    cout << " Autor: Michalina Zacharek" << endl;
+    cout << " Klasa: 2D" << endl;
+    cout << "----------------------------------------------" << endl;
+    cout << "Nacisnij enter, aby rozpoczac gre.";
+    cout << endl;
     int n=10;
     char mapa[n][n];
 
@@ -18,27 +26,36 @@ int main(){
   int punkty=0;
   int x=0, y=0;
   char ruch;
-  while (punkty<6){
-    for (int i=0; i<n; i++){
-        for(int j=0; j<n; j++){
-            if (i==x&&j==y){
-                    cout << "G ";
 
-}
-            else{
+  cout << endl;
+    cout << "PLANSZA GRY:" << endl;
+    cout << "G - gracz, M - moneta, . - puste pole" << endl;
+    cout << endl;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i == x && j == y)
+                cout << "G ";
+            else
                 cout << mapa[i][j] << " ";
-}}
+        }
         cout << endl;
-}
+    }
+
+  while (punkty<6){{
+
     cout << "Punkty: " << punkty << endl;
     cout << "Pozycja gracza: (" << x <<", " << y << ")" << endl;
+    cout << " "<< endl;
     cout << "Aby sie poruszyc nacisnij klaiwsz:" << endl;
     cout << "Nacisnij W, aby poruszyc sie do gory." << endl;
     cout << "Nacisnij A, aby poruszyc sie w lewo."<<endl;
     cout <<"Nacisnij S, aby poruszyc sie w dol." << endl;
     cout << "Nacisnij D, aby poruszyc sie w prawo." << endl;
     cout << "Wybor nalezy do ciebe." << endl;
+    cout << "Twoj wybor to: ";
     cin >> ruch;
+    cout << " " << endl;
 
     if((ruch== 'w' || ruch=='W')&& x>0){
         x--;
@@ -57,9 +74,20 @@ int main(){
         punkty++;
         mapa[x][y]='.';
         cout << "Brawo! Zdobyles punkt."<<endl;
+        cout << " "<< endl;
     }
+  }
 
-
+for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+        if (i == x && j == y)
+            cout << "G ";
+        else {
+            cout << mapa[i][j] << " ";
+        }
+    }
+    cout << endl;
+}
 }
     cout << "Zebrales wszystkie moenty!" << endl;
     cout << "GRATULACJE" << endl;
